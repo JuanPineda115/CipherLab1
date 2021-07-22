@@ -3,6 +3,7 @@
 # Hugo Roman 19199
 # Laurelinda Gomez 19501
 # Juan Pablo Pineda 19087
+# para el inverso si utilizó esta página https://www.geeksforgeeks.org/implementation-affine-cipher/
 
 def cleantext(txt):
     t = txt.upper()
