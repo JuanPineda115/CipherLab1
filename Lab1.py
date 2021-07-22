@@ -44,9 +44,9 @@ print("Texto descifrado: ", dec, "\n")
 print("\nMetodo: Afin\nTexto: Hola Mundo\nClave: nueva")
 TEXT = "Hola Mundo"
 clean = cleantext(TEXT)
-cif = vg.cifrar(clean, "nueva")
+cif = af.cifrar(clean, "nueva")
 print("Texto cifrado: ", cif)
-dec = vg.decifrar(cif, "nueva")
+dec = af.decifrar(cif, "nueva")
 print("Texto descifrado: ", dec, "\n")
 
 print("Descifrando los textos proveidos con fuerza bruta:")
