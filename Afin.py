@@ -16,8 +16,6 @@ def cleantext(txt):
         t = t.replace(x, '')
     return t
 
-#abecedario 27 letras
-abc = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'
 
 def inverso(l, s):
     z,y, u,v = 0,1, 1,0
