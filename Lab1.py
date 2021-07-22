@@ -5,7 +5,9 @@
 # Juan Pablo Pineda 19087
 # modulo main de pruebas de los cifrados
 
-import Ciphers as enc
+import Caesar as cs
+import Afin as af
+import Vigenere as vg
 
 def cleantext(txt):
     t = txt.upper()
@@ -19,12 +21,36 @@ def cleantext(txt):
         t = t.replace(x, '')
     return t
 
-prueba = 'hello world'
-clean = cleantext(prueba)
-print(clean)
+# EJEMPLO BASICO CAESAR
+print("\nEjemplos basicos de cifrado y descifrado")
+print("\nMetodo: Caesar\nTexto: Hola Mundo\nClave: 2")
+TEXT = "HOLA MUNDO"
+clean = cleantext(TEXT)
+cif = cs.cifrar(clean, 2)
+print("Texto cifrado: ", cif)
+dec = cs.decifrar(cif, 2)
+print("Texto descifrado: ", dec, "\n")
 
-cipher = enc.cVigenere(clean, "cinco")
-print(cipher)
+# EJEMPLO BASICO VIGENERE
+print("\nMetodo: Vigenere\nTexto: Hola Mundo\nClave: nueva")
+TEXT = "Hola Mundo"
+clean = cleantext(TEXT)
+cif = vg.cifrar(clean, "nueva")
+print("Texto cifrado: ", cif)
+dec = vg.decifrar(cif, "nueva")
+print("Texto descifrado: ", dec, "\n")
 
-decipher = enc.dVigenere(clean, "cinco")
-print(decipher)
+# EJEMPLO BASICO Afin
+print("\nMetodo: Afin\nTexto: Hola Mundo\nClave: nueva")
+TEXT = "Hola Mundo"
+clean = cleantext(TEXT)
+cif = vg.cifrar(clean, "nueva")
+print("Texto cifrado: ", cif)
+dec = vg.decifrar(cif, "nueva")
+print("Texto descifrado: ", dec, "\n")
+
+print("Descifrando los textos proveidos con fuerza bruta:")
+print("\nCaesar")
+cs.BruteForce()
+print("Vigenere")
+vg.BruteForce()
